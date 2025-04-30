@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Mon Application</string>
+    <string name="welcome_back">Bienvenue</string>
+    <string name="login_to_continue">Connectez-vous pour continuer</string>
+    <string name="email">Email</string>
+    <string name="password">Mot de passe</string>
+    <string name="forgot_password">Mot de passe oublié?</string>
+    <string name="login">Se connecter</string>
+    <string name="or">OU</string>
+    <string name="google_login">Se connecter avec Google</string>
+    <string name="facebook_login">Se connecter avec Facebook</string>
+    <string name="dont_have_account">Vous n\'avez pas de compte?</string>
+    <string name="sign_up">S\'inscrire</string>
+    <string name="app_logo">Logo de l\'application</string>
+    <string name="image">Image:</string>
+    <string name="choose_file">Choisir un fichier</string>
+    <string name="no_file_chosen">Aucun fichier choisi</string>
+    <string name="title">Titre:</string>
+    <string name="enter_title">Entrer le titre</string>
+    <string name="description">Description:</string>
+    <string name="price">Prix:</string>
+    <string name="enter_price">Entrer le prix</string>
+    <string name="validate">Valider</string>
+    <string name="product_created">Produit créé avec succès!</string>
+    <string name="image_required">Veuillez choisir une image</string>
+    <string name="title_required">Le titre est requis</string>
+    <string name="description_required">La description est requise</string>
+    <string name="price_required">Le prix est requis</string>
+    <string name="invalid_price">Prix invalide</string>
+</resources>

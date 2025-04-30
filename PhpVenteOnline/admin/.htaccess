@@ -1,0 +1,4 @@
+Authname "Espace Admin"
+Authtype Basic
+AuthUserFile "C:\wamp64\www\NirInfo\venteOnline\admin\.htpasswd"
+Require valid-user 

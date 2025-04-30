@@ -1,0 +1,78 @@
+@import url('layout.css');
+
+form h1{
+    text-align: center;
+}
+
+form{
+    margin: 5rem;
+    border: 2px solid #fc0;
+    border-radius: 15px;
+    padding: 20px;
+
+}
+
+.corps{
+    display: flex;
+    flex-direction: column;
+}
+
+.corps label{
+    margin-top: 2rem;
+}
+
+.corps button{
+    padding: 12px;
+    border-radius: 5em;
+    margin-top: 3em;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    
+}
+
+.corps button:hover{
+    background-color: #fc0;
+    color: black;
+}
+
+.erreur {
+    color: #ff4d4f;
+    background: #ffeaea;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: #4CAF50;
+    background: #e7f9e9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.corps label{
+    display: block;
+    font-weight: bold;
+}
+
+.corps textarea{
+    width: 100%;
+    height: 100px;
+    margin-top: 1rem;
+    padding: 10px;
+}
+
+.corps input{
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+
+}
+
+.corps input[type="file"]{
+    border: 1px solid black;
+    margin-top: 1rem;
+}

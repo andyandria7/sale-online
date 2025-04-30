@@ -1,0 +1,36 @@
+@import url("layout.css");
+
+/* corpe */
+.main {
+  background-image: url("../images/font.png"),
+    linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.701));
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 86vh;
+}
+
+.main h1,
+.main h2 {
+  color: white;
+  text-align: center;
+  padding-top: 20vh;
+  font-weight: bolder;
+  text-shadow: #fc0 1px 0 10px;
+}
+
+    /* ::-webkit-scrollbar {
+    width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+    background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 6px;
+    border: 3px solid transparent;
+    } */

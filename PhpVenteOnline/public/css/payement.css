@@ -1,0 +1,311 @@
+@import url('layout.css');
+
+       /* Variables de couleurs */
+:root {
+    --primary: #fc0;
+    --primary-dark: #e6b800;
+    --primary-light: #ffdf4d;
+    --dark: #333;
+    --light: #f9f9f9;
+    --gray: #888;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: var(--dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container principal */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Conteneur de paiement */
+.payment-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow);
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+/* En-tête du conteneur */
+.payment-header {
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--primary-light) 10%, transparent 70%);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.payment-header h2 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenu de paiement */
+.payment-content {
+    padding: 2rem;
+}
+
+/* Étapes de paiement */
+.payment-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.payment-steps::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: var(--gray);
+    z-index: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 100px;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--gray);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.step.active .step-number {
+    background-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+.step-label {
+    font-size: 0.85rem;
+    color: var(--gray);
+    text-align: center;
+}
+
+.step.active .step-label {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+/* Formulaire de paiement */
+.payment-form {
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.inp, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.inp:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-group .form-group {
+    flex: 1;
+}
+
+/* Détails de la carte */
+.card-details {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.card-icons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.card-icon {
+    width: 40px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: var(--dark);
+}
+
+/* Résumé de la commande */
+.order-summary {
+    margin-top: 2rem;
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.summary-total {
+    font-weight: 600;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+/* Bouton de paiement */
+.payment-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: var(--primary);
+    color: var(--dark);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.payment-button:active {
+    transform: translateY(0);
+}
+
+.payment-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+    transition: all 0.3s ease;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.payment-button:hover::after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Texte de sécurité */
+.security-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .payment-container {
+        margin: 1rem 0;
+    }
+    
+    .payment-content {
+        padding: 1.5rem;
+    }
+    
+    .payment-steps {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .payment-steps::before {
+        display: none;
+    }
+    
+    .input-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
